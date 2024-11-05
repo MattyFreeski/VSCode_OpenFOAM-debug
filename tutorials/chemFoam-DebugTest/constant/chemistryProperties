@@ -50,7 +50,7 @@ odeCoeffs
     relTol          0.1;
 }
 
-#include "reactions_Ne"
+#include "reaction_Ne"
 
 
 

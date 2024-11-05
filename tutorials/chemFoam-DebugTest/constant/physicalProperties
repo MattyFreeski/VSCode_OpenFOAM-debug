@@ -27,7 +27,7 @@ thermoType
 
 defaultSpecie N2;
 
-#include "thermo_Caltech"
+#include "thermo_Ne"
 
 
 // ************************************************************************* //

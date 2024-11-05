@@ -1,0 +1,146 @@
+/*---------------------------------------------------------------------------*\
+Reference:
+    Cantera format NASA9 files from Caltech Explosion Dynamics Laboratory
+    https://shepherd.caltech.edu/EDL/PublicResources/sdt/cti_mech.html (checked on 05/10/2024)
+
+    Thermodynamics:     Caltech NASA9 converted from cantera: thermo.airNASA9ions
+                        NASA Glenn Coefficients for Calculating Thermodynamic Properties of  Individual Species (NASA9)
+                        https://ntrs.nasa.gov/api/citations/20020085330/downloads/20020085330.pdf (checked on 30/09/2024)
+                        Cantera format NASA9 coefficients files from Caltech Explosion Dynamics Laboratory
+                        https://shepherd.caltech.edu/EDL/PublicResources/sdt/cti_mech.html (checked on 05/10/2024)
+
+
+Air 25-species: O2 O N2 N NO C C2 CO CO2 CN AR HE e- N+ NO+ N2+ O+ O2+ AR+ CO2+ CO+ HE+ C+ C2+ CN+
+\*---------------------------------------------------------------------------*/
+
+
+species            3 (N2 N e-);
+
+// N2+
+// {
+//     specie
+//     {
+//         molWeight       28.012855;
+//     }
+//     thermodynamics
+//     {
+//         Tlow            298.15;
+//         Thigh           20000;
+//         Tcommon         10149.075;
+//         highCpCoeffs    ( -13.61183854 0.005568066047 -5.246875623e-07 2.035390694e-11 -2.884387149e-16 224576.5603 130.2092864 );
+//         lowCpCoeffs     ( 3.188966155 0.0008739140687 -1.226245364e-07 1.391524085e-11 -6.490812691e-16 180561.8517 5.354304759 );
+//     }
+//     transport
+//     {
+//         As              0;
+//         Ts              0;
+//     }
+//     elements
+//     {
+//         e               -1;
+//         N               2;
+//     }
+// }
+
+N2
+{
+    specie
+    {
+        molWeight       28.0134;
+    }
+    thermodynamics
+    {
+        Tlow            200;
+        Thigh           20000;
+        Tcommon         10100;
+        highCpCoeffs    ( 38.55815934 -0.0108273068 1.226284434e-06 -5.638174308e-11 9.111977686e-16 -85568.88752 -253.8974967 );
+        lowCpCoeffs     ( 3.233832905 0.0008859052376 -2.174073977e-07 2.203149561e-11 -6.776238159e-16 -1008.567335 4.338787749 );
+    }
+    transport
+    {
+        As              0;
+        Ts              0;
+    }
+    elements
+    {
+        N               2;
+    }
+}
+
+
+N
+{
+    specie
+    {
+        molWeight       14.0067;
+    }
+    thermodynamics
+    {
+        Tlow            200;
+        Thigh           20000;
+        Tcommon         10100;
+        highCpCoeffs    ( 0.9495603198 0.0007315331526 -7.224723373e-08 3.113726926e-12 -4.921021893e-17 56822.56013 14.47300668 );
+        lowCpCoeffs     ( 2.547219978 -6.947660269e-05 8.363928095e-09 5.761462021e-12 -4.834285606e-16 56096.895 3.94075531 );
+    }
+    transport
+    {
+        As              0;
+        Ts              0;
+    }
+    elements
+    {
+        N               1;
+    }
+}
+
+e-
+{
+    specie
+    {
+        molWeight       0.000548579903;
+    }
+    thermodynamics
+    {
+        Tlow            298.15;
+        Thigh           20000;
+        Tcommon         10149.075;
+        highCpCoeffs    ( 2.5 0 0 0 0 -745.375 -11.72081224 );
+        lowCpCoeffs     ( 2.5 0 0 0 0 -745.375 -11.72081224 );
+    }
+    transport
+    {
+        As              0;
+        Ts              0;
+    }
+    elements
+    {
+        e               1;
+    }
+}
+
+
+// N+
+// {
+//     specie
+//     {
+//         molWeight       14.006155;
+//     }
+//     thermodynamics
+//     {
+//         Tlow            298.15;
+//         Thigh           20000;
+//         Tcommon         10149.075;
+//         highCpCoeffs    ( 2.300263596 0.0001137860967 -9.35139787e-09 3.533268943e-13 -4.426487653e-18 225635.5555 6.265906075 );
+//         lowCpCoeffs     ( 2.569543674 -9.887065821e-05 3.848801986e-08 -3.879076674e-12 1.258831425e-16 225604.4104 4.605390722 );
+//     }
+//     transport
+//     {
+//         As              0;
+//         Ts              0;
+//     }
+//     elements
+//     {
+//         e               -1;
+//         N               1;
+//     }
+// }

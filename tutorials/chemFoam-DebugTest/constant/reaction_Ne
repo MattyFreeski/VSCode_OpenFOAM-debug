@@ -1,0 +1,48 @@
+/*---------------------------------------------------------------------------*\
+Reference:
+    Cantera format reactions files from Caltech Explosion Dynamics Laboratory
+    https://shepherd.caltech.edu/EDL/PublicResources/sdt/cti_mech.html (checked on 05/10/2024)
+
+    Reference paper: Modeling of nonequilibrium CO Fourth-Positive and 
+                     CN Violet emission in CO2–N2 gases
+
+Air 25-species: O2 O N2 N NO C C2 CO CO2 CN AR HE e- N+ NO+ N2+ O+ O2+ AR+ CO2+ CO+ HE+ C+ C2+ CN+
+
+Only Air 11 reactions have been used
+(Air 11-species: e- N+ O+ NO+ N2+ O2+ N O NO N2 O2)
+\*---------------------------------------------------------------------------*/
+
+
+reactions
+{
+
+    // reaction-1 
+    // {
+    //     type            reversibleThirdBodyArrhenius;
+    //     reaction        "N2 = N + N";
+    //     A               7e+18;
+    //     beta            -1.6;
+    //     Ta              113193.3724;
+    //     coeffs          5
+    //                     (
+    //                     (N2 1)
+    //                     (N 4.28)
+    //                     (e- 0)
+    //                     (N+ 1)
+    //                     (N2+ 1)
+    //                     )
+    //                     ;
+    // }
+
+    reaction-e 
+    {
+        type            reversibleArrhenius;
+        reaction        "N2 + e- = N + N + e-";
+        A               3.0e+21;    // caltech 6;            
+        beta            -1.6;       //caltech -2.6;          
+        Ta              113193.3724;    
+    }
+
+
+}
+
